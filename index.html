@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+  </head>
+  <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <!-- <a-scene
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: true; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+    > -->
+    <a-scene
+      embedded
+      arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; patternRatio: 0.75; sourceType: webcam;"
+      antialias="true"
+    >
+      <a-assets>
+        <a-asset-item
+          id="robot3"
+          src="objects/robot3/robot03_anim01C_gltf.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <a-assets>
+        <img id="sky" src="https://i.stack.imgur.com/ZH9Op.jpg" />
+      </a-assets>
+
+      <a-sky src="#sky"></a-sky>
+      <a-marker
+        preset="custom"
+        type="pattern"
+        url="marker-tokyo.patt"
+        arjs-anchor
+        material="sphericalEnvMap: #sky"
+      >
+        <a-entity
+          gltf-model="robot3"
+          animation-mixer
+          scale="0.016 0.016 0.016"
+          position="0 0.5 0"
+        ></a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
