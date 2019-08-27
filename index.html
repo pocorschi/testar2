@@ -14,11 +14,6 @@
     >
       <a-assets>
         <a-asset-item id="fox" src="assets/fox/scene.gltf"></a-asset-item>
-        <a-asset-item id="bird" src="assets/bird/scene.gltf"></a-asset-item>
-        <a-asset-item
-          id="griffin"
-          src="assets/griffin/scene.gltf"
-        ></a-asset-item>
       </a-assets>
 
       <!-- CLASSIC MARKERS -->
@@ -41,43 +36,6 @@
         ></a-entity>
       </a-marker>
 
-      <!-- KYOTO Marker -->
-      <!-- Bird -->
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="marker-kyoto.patt"
-        arjs-anchor
-        material
-      >
-        <a-entity
-          gltf-model="#bird"
-          animation-mixer
-          scale="0.003 0.003 0.003"
-          position="0 0.5 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- OSAKA Marker -->
-      <!-- Griffin -->
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="marker-osaka.patt"
-        arjs-anchor
-        material
-      >
-        <a-entity
-          gltf-model="#griffin"
-          animation-mixer
-          scale="0.6 0.6 0.6"
-          position="0 0.5 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- BASIC MARKERS -->
-      <!-- ############### -->
-
       <!-- TOKYO Marker -->
       <!-- Fox -->
       <a-marker
@@ -91,40 +49,6 @@
           gltf-model="#fox"
           animation-mixer
           scale="0.016 0.016 0.016"
-          position="0 0.5 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- KYOTO Marker -->
-      <!-- Bird -->
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="marker-kyoto-basic.patt"
-        arjs-anchor
-        material
-      >
-        <a-entity
-          gltf-model="#bird"
-          animation-mixer
-          scale="0.003 0.003 0.003"
-          position="0 0.5 0"
-        ></a-entity>
-      </a-marker>
-
-      <!-- OSAKA Marker -->
-      <!-- Griffin -->
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="marker-osaka-basic.patt"
-        arjs-anchor
-        material
-      >
-        <a-entity
-          gltf-model="#griffin"
-          animation-mixer
-          scale="0.6 0.6 0.6"
           position="0 0.5 0"
         ></a-entity>
       </a-marker>
